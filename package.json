@@ -11,14 +11,15 @@
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "prettier": "^3.2.5",
-    "turbo": "latest"
+    "turbo": "latest",
+    "@repo/db": "*"
   },
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "npm@10.5.0",
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "packageManager": "npm@10.5.0"
 }
