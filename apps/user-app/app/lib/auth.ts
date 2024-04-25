@@ -1,7 +1,5 @@
-import db from "@repo/db/client";
+// import db from "@repo/db/client";
 import CredentialsProvider from "next-auth/providers/credentials"
-import bcrypt from "bcrypt";
-import { signIn, signOut } from "next-auth/react";
 
 export const authOptions = {
     providers: [
@@ -24,6 +22,8 @@ export const authOptions = {
             console.log(credentials)
             return {
                 id:1,
+                phone: "123",
+                password: "sasa",
                 name:"amj",
                 email:"amj",
             }
@@ -69,7 +69,7 @@ export const authOptions = {
           
         })
     ],
-    secret: process.env.NEXTAUTH_SECRET,
+    secret: "secret",
     callbacks: {
         session: ({ session, token, user}: any ) => {
             console.log("session:",session);
